@@ -5,7 +5,7 @@ TavernaPlayer.setup do |config|
   # and sets how often the server will be polled for updates by each worker.
   # The retry interval is also in seconds and sets how long a worker will wait
   # before trying to start a run if the server is initially busy.
-  config.server_address = "http://{{ansible_ssh_host}}:8080/{{taverna_server_context}}"
+  config.server_address = "http://localhost:8080/{{taverna_server_context}}"
   config.server_username = "{{taverna_server_user}}"
   config.server_password = "{{taverna_server_pass}}"
   config.server_poll_interval = 2

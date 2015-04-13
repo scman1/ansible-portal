@@ -1,5 +1,5 @@
 ---
-- hosts: rserve:&apt
+- hosts: rserve
   sudo: true
   tasks:
 
@@ -73,7 +73,7 @@
       service: name=rserve state=started
 
 # For systems that use update-rc.d, run the command manually to enable starting on reboot
-- hosts: rserve:&apt
+- hosts: rserve
   sudo: true
   tasks:
     - name: Start Rserve on reboot

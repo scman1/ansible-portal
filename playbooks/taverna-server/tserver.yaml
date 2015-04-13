@@ -6,8 +6,7 @@
       file: path={{taverna_server_install}} state=directory owner=tomcat7
 
     - name: Download Taverna Server
-      get_url: url=https://launchpad.net/taverna-server/2.5.x/2.5.4/+download/TavernaServer-2.5.4.war
-            dest={{taverna_server_install}}/taverna-server.war
+      get_url: url=https://launchpad.net/taverna-server/2.5.x/2.5.4/+download/TavernaServer-2.5.4.war validate_certs=no dest={{taverna_server_install}}/taverna-server.war
 
     - name: Unpack Taverna Server
       command: unzip {{taverna_server_install}}/taverna-server.war -d {{taverna_server_install}} creates={{taverna_server_install}}/WEB-INF/web.xml

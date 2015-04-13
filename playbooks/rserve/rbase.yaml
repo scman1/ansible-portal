@@ -53,7 +53,7 @@
     - name: Update apt repository
       apt: update_cache=yes
 
-- hosts: rbase:&apt
+- hosts: rbase
   sudo: true
   tasks:
 

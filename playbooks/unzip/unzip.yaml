@@ -1,5 +1,5 @@
 ---
-- hosts: taverna-server:&apt
+- hosts: taverna-server
   sudo: true
 
   tasks:
