@@ -1,0 +1,29 @@
+
+PLAY [localwebsvr] ************************************************************ 
+
+GATHERING FACTS *************************************************************** 
+ok: [127.0.0.1]
+
+TASK: [group_by key={{ansible_pkg_mgr}}] ************************************** 
+changed: [127.0.0.1]
+
+PLAY [localwebsvr] ************************************************************ 
+
+TASK: [Update apt repository] ************************************************* 
+failed: [127.0.0.1] => {"failed": true, "parsed": false}
+invalid output was: [sudo via ansible, key=wwwbsahqlalwxropvvybijllokzvkjzx] password: 
+Sorry, try again.
+[sudo via ansible, key=wwwbsahqlalwxropvvybijllokzvkjzx] password: 
+Sorry, try again.
+[sudo via ansible, key=wwwbsahqlalwxropvvybijllokzvkjzx] password: 
+Sorry, try again.
+sudo: 3 incorrect password attempts
+
+
+FATAL: all hosts have already failed -- aborting
+
+PLAY RECAP ******************************************************************** 
+           to retry, use: --limit @/home/seek/site.yaml.retry
+
+127.0.0.1                  : ok=2    changed=1    unreachable=0    failed=1   
+

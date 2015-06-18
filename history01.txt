@@ -1,0 +1,103 @@
+    1  ping google.com
+    2  ls
+    3  cd ..
+    4  ls
+    5  cd opt
+    6  ls
+    7  cd ..
+    8  cd etx
+    9  cd etc
+   10  ls
+   11  cd..
+   12  cd ..
+   13  ls
+   14  exit
+   15  cd /opt
+   16  ls
+   17  cd /srv
+   18  cd /srv/rails
+   19  ls
+   20  cd /seek
+   21  cd seek
+   22  ls
+   23  rails console production
+   24  libxml2
+   25  cd /
+   26  lsls
+   27  ls -l
+   28  exit
+   29  git
+   30  git clone https://github.com/scman1/ansible-portal.git
+   31  ls
+   32  cd ansible-portal
+   33  la
+   34  ls
+   35  cat setup.sh
+   36  cat README.md
+   37  cat setup.sh -more
+   38  cat setup.sh --more
+   39  cat setup.sh :more
+   40  cat setup.sh
+   41  more setup.sh
+   42  more README.md
+   43  nano READ.me
+   44  nano README.md
+   45  clear
+   46  python
+   47  sudo apt-get install python-yaml phyton-jinja
+   48  sudo apt-get install phyton-jinja2
+   49  sudo apt-get install python-jinja2
+   50  exit
+   51  ls
+   52  cd ansible-portal
+   53  ls
+   54  ansible -c ssh -i inventory/hosts playbooks/site.yaml
+   55  ansible-playbook -c ssh -i inventory/hosts playbooks/site.yaml
+   56  nano playbooks/site.yamls
+   57  nano playbooks/site.yaml
+   58  ansible-playbook -c ssh -i inventory/hosts playbooks/site.yaml --user seek --ask-sudo-pass
+   59  ansible-playbook -c local -i inventory/hosts playbooks/site.yaml --user seek --ask-sudo-pass
+   60  ls
+   61  ansible-playbook -c local -i inventory/hosts playbooks/site.yaml --user seek --ask-sudo-pass >> consoleout03.txt
+   62  nano consoleout03.txt
+   63  rm /usr/local/lib/R/site-library/00LOCK-MCMglmm
+   64  ls /usr/local/lib/R/site-library/00LOCK-MCMglmm
+   65  ls /usr/local/lib/R/site-library
+   66  ls /usr/local/lib/R/site-library/00LOCK-MCMCglmm
+   67  rm /usr/local/lib/R/site-library/00LOCK-MCMCglmm
+   68  rmdir /usr/local/lib/R/site-library/00LOCK-MCMCglmm
+   69  sudo rmdir /usr/local/lib/R/site-library/00LOCK-MCMCglmm
+   70  ls /usr/local/lib/R/site-library/00LOCK-MCMCglmm
+   71  ls /usr/local/lib/R/site-library/
+   72  ansible-playbook -c local -i inventory/hosts playbooks/site.yaml --user seek --ask-sudo-pass >> consoleout04.txt
+   73  nano consoleout04.txt
+   74  ansible-playbook -c local -i inventory/hosts playbooks/site.yaml --user seek --ask-sudo-pass
+   75  ansible-playbook -c local -i inventory/hosts playbooks/site.yaml --user seek --ask-sudo-pass >> consoleout05.txt
+   76  nano consoleout05.txt
+   77  nano inventory/hosts
+   78  ansible-playbook -c local -i inventory/hosts playbooks/site.yaml --user seek --ask-sudo-pass >> consoleout06.txt
+   79  nano consoleout06.txt
+   80  grep -r fftw3
+   81  grep -r fftw3 .
+   82  nano playbooks/biovel/workflows/sound.yaml
+   83  apt-get install fftw3/dev
+   84* 
+   85  sudo apt-get install fftw3-dev
+   86  nano playbooks/biovel/workflows/sound.yaml
+   87  ansible-playbook -c local -i inventory/hosts playbooks/site.yaml --user seek --ask-sudo-pass
+   88  git status
+   89* nano playbooks.yaml
+   90  nano unzip/unzip.yaml
+   91* nano pl/site.yaml
+   92  nano inventory/hosts
+   93  ansible-playbook -c local -i inventory/hosts playbooks/site.yaml --user seek --ask-sudo-pass
+   94  nano playbooks/unzip/unzip.yaml
+   95* ansible-playbook -c local -i inventory/hosts playbooks/site.yaml --user seek --ask-sudo-pass 
+   96  ansible-playbook -c local -i inventory/hosts playbooks/site.yaml --user seek --ask-sudo-pass >> consoleout07.txt
+   97  nano consoleout07.txt
+   98  ansible -v
+   99  ansible --version
+  100  git add -a
+  101  git add -A
+  102  git status
+  103  history >> history01.txt

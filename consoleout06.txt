@@ -1,0 +1,166 @@
+
+PLAY [localwebsvr] ************************************************************ 
+
+GATHERING FACTS *************************************************************** 
+ok: [127.0.0.1]
+
+TASK: [group_by key={{ansible_pkg_mgr}}] ************************************** 
+changed: [127.0.0.1]
+
+PLAY [localwebsvr] ************************************************************ 
+
+TASK: [Update apt repository] ************************************************* 
+ok: [127.0.0.1]
+
+PLAY [rbase] ****************************************************************** 
+
+TASK: [group_by key=rOn{{ansible_distribution}}] ****************************** 
+changed: [127.0.0.1]
+
+PLAY [rOnUbuntu] ************************************************************** 
+
+TASK: [Add package python-software-properties] ******************************** 
+ok: [127.0.0.1]
+
+TASK: [Add Ubuntu repository for R] ******************************************* 
+changed: [127.0.0.1]
+
+TASK: [Add repository key] **************************************************** 
+ok: [127.0.0.1]
+
+NOTIFIED: [Update apt repository] ********************************************* 
+ok: [127.0.0.1]
+
+PLAY [rOnLinuxmint] *********************************************************** 
+skipping: no hosts matched
+
+PLAY [rbase] ****************************************************************** 
+
+TASK: [Setup R facts] ********************************************************* 
+ok: [127.0.0.1]
+
+TASK: [Install R] ************************************************************* 
+ok: [127.0.0.1] => (item=r-base,r-base-dev,r-recommended)
+
+PLAY [rserve] ***************************************************************** 
+
+TASK: [Install R packages from CRAN] ****************************************** 
+changed: [127.0.0.1] => (item=lattice)
+changed: [127.0.0.1] => (item=Matrix)
+changed: [127.0.0.1] => (item=MASS)
+changed: [127.0.0.1] => (item=nlme)
+changed: [127.0.0.1] => (item=mvtnorm)
+changed: [127.0.0.1] => (item=MCMCglmm)
+changed: [127.0.0.1] => (item=truncnorm)
+changed: [127.0.0.1] => (item=IPMpack)
+
+NOTIFIED: [R changed] ********************************************************* 
+ok: [127.0.0.1]
+
+PLAY [rserve] ***************************************************************** 
+
+TASK: [Install R packages from CRAN] ****************************************** 
+changed: [127.0.0.1] => (item=quadprog)
+changed: [127.0.0.1] => (item=popbio)
+changed: [127.0.0.1] => (item=Matrix)
+changed: [127.0.0.1] => (item=expm)
+
+NOTIFIED: [R changed] ********************************************************* 
+ok: [127.0.0.1]
+
+PLAY [rserve:&apt] ************************************************************ 
+
+TASK: [Install CURL libraries] ************************************************ 
+changed: [127.0.0.1] => (item=libcurl4-gnutls-dev)
+
+PLAY [rserve] ***************************************************************** 
+
+TASK: [Install devtools package from CRAN] ************************************ 
+changed: [127.0.0.1] => (item=RCurl)
+changed: [127.0.0.1] => (item=httr)
+changed: [127.0.0.1] => (item=devtools)
+
+TASK: [Install popdemo package from CRAN archive] ***************************** 
+changed: [127.0.0.1]
+
+NOTIFIED: [R changed] ********************************************************* 
+ok: [127.0.0.1]
+
+PLAY [rserve] ***************************************************************** 
+
+TASK: [Install R packages from CRAN] ****************************************** 
+changed: [127.0.0.1] => (item=permute)
+changed: [127.0.0.1] => (item=lattice)
+changed: [127.0.0.1] => (item=nlme)
+changed: [127.0.0.1] => (item=MASS)
+changed: [127.0.0.1] => (item=vegan)
+changed: [127.0.0.1] => (item=ape)
+changed: [127.0.0.1] => (item=plyr)
+changed: [127.0.0.1] => (item=digest)
+changed: [127.0.0.1] => (item=gtable)
+changed: [127.0.0.1] => (item=reshape2)
+changed: [127.0.0.1] => (item=stringr)
+changed: [127.0.0.1] => (item=scales)
+changed: [127.0.0.1] => (item=RColorBrewer)
+changed: [127.0.0.1] => (item=dichromat)
+changed: [127.0.0.1] => (item=colorspace)
+changed: [127.0.0.1] => (item=labeling)
+changed: [127.0.0.1] => (item=munsell)
+changed: [127.0.0.1] => (item=ggplot2)
+
+NOTIFIED: [R changed] ********************************************************* 
+ok: [127.0.0.1]
+
+PLAY [rserve] ***************************************************************** 
+
+TASK: [Install R packages from CRAN] ****************************************** 
+changed: [127.0.0.1] => (item=biom)
+changed: [127.0.0.1] => (item=RColorBrewer)
+changed: [127.0.0.1] => (item=vegan)
+changed: [127.0.0.1] => (item=gplots)
+changed: [127.0.0.1] => (item=calibrate)
+changed: [127.0.0.1] => (item=ape)
+changed: [127.0.0.1] => (item=picante)
+changed: [127.0.0.1] => (item=Hmisc)
+
+NOTIFIED: [R changed] ********************************************************* 
+ok: [127.0.0.1]
+
+PLAY [rserve:&apt] ************************************************************ 
+
+TASK: [Install PROJ and GDAL libraries] *************************************** 
+changed: [127.0.0.1] => (item=libproj-dev,libgdal1-dev)
+
+PLAY [rserve] ***************************************************************** 
+
+TASK: [Install R packages from CRAN] ****************************************** 
+changed: [127.0.0.1] => (item=lattice)
+changed: [127.0.0.1] => (item=sp)
+changed: [127.0.0.1] => (item=rgdal)
+changed: [127.0.0.1] => (item=raster)
+changed: [127.0.0.1] => (item=SDMTools)
+
+NOTIFIED: [R changed] ********************************************************* 
+ok: [127.0.0.1]
+
+PLAY [rserve] ***************************************************************** 
+
+TASK: [Install R packages from CRAN] ****************************************** 
+changed: [127.0.0.1] => (item=betareg)
+
+NOTIFIED: [R changed] ********************************************************* 
+ok: [127.0.0.1]
+
+PLAY [rserve:&apt] ************************************************************ 
+
+TASK: [Install FFTW3 and SndFile libraries] *********************************** 
+failed: [127.0.0.1] => (item=fftw3-dev,libsndfile1-dev) => {"failed": true, "item": "fftw3-dev,libsndfile1-dev"}
+msg: No package matching 'fftw3-dev' is available
+
+FATAL: all hosts have already failed -- aborting
+
+PLAY RECAP ******************************************************************** 
+           to retry, use: --limit @/home/seek/site.yaml.retry
+
+127.0.0.1                  : ok=27   changed=13   unreachable=0    failed=1   
+

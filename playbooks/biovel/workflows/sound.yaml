@@ -6,7 +6,7 @@
     - name: Install FFTW3 and SndFile libraries
       action: apt pkg={{item}} state=present
       with_items:
-        - fftw3-dev
+        - libfftw3-dev
         - libsndfile1-dev
 
 - hosts: rserve

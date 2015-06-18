@@ -1,0 +1,194 @@
+
+PLAY [localwebsvr] ************************************************************ 
+
+GATHERING FACTS *************************************************************** 
+ok: [127.0.0.1]
+
+TASK: [group_by key={{ansible_pkg_mgr}}] ************************************** 
+changed: [127.0.0.1]
+
+PLAY [localwebsvr] ************************************************************ 
+
+TASK: [Update apt repository] ************************************************* 
+ok: [127.0.0.1]
+
+PLAY [rbase] ****************************************************************** 
+
+GATHERING FACTS *************************************************************** 
+ok: [test]
+
+TASK: [group_by key=rOn{{ansible_distribution}}] ****************************** 
+changed: [test]
+
+PLAY [rOnUbuntu] ************************************************************** 
+
+TASK: [Add package python-software-properties] ******************************** 
+ok: [test]
+
+TASK: [Add Ubuntu repository for R] ******************************************* 
+ok: [test]
+
+TASK: [Add repository key] **************************************************** 
+ok: [test]
+
+PLAY [rOnLinuxmint] *********************************************************** 
+skipping: no hosts matched
+
+PLAY [rbase] ****************************************************************** 
+
+TASK: [Setup R facts] ********************************************************* 
+ok: [test]
+
+TASK: [Install R] ************************************************************* 
+ok: [test] => (item=r-base,r-base-dev,r-recommended)
+
+PLAY [rserve] ***************************************************************** 
+
+TASK: [Install R packages from CRAN] ****************************************** 
+changed: [test] => (item=lattice)
+changed: [test] => (item=Matrix)
+changed: [test] => (item=MASS)
+changed: [test] => (item=nlme)
+changed: [test] => (item=mvtnorm)
+changed: [test] => (item=MCMCglmm)
+changed: [test] => (item=truncnorm)
+changed: [test] => (item=IPMpack)
+
+NOTIFIED: [R changed] ********************************************************* 
+ok: [test]
+
+PLAY [rserve] ***************************************************************** 
+
+TASK: [Install R packages from CRAN] ****************************************** 
+changed: [test] => (item=quadprog)
+changed: [test] => (item=popbio)
+changed: [test] => (item=Matrix)
+changed: [test] => (item=expm)
+
+NOTIFIED: [R changed] ********************************************************* 
+ok: [test]
+
+PLAY [rserve:&apt] ************************************************************ 
+skipping: no hosts matched
+
+PLAY [rserve] ***************************************************************** 
+
+TASK: [Install devtools package from CRAN] ************************************ 
+changed: [test] => (item=RCurl)
+changed: [test] => (item=httr)
+changed: [test] => (item=devtools)
+
+TASK: [Install popdemo package from CRAN archive] ***************************** 
+changed: [test]
+
+NOTIFIED: [R changed] ********************************************************* 
+ok: [test]
+
+PLAY [rserve] ***************************************************************** 
+
+TASK: [Install R packages from CRAN] ****************************************** 
+changed: [test] => (item=permute)
+changed: [test] => (item=lattice)
+changed: [test] => (item=nlme)
+changed: [test] => (item=MASS)
+changed: [test] => (item=vegan)
+changed: [test] => (item=ape)
+changed: [test] => (item=plyr)
+changed: [test] => (item=digest)
+changed: [test] => (item=gtable)
+changed: [test] => (item=reshape2)
+changed: [test] => (item=stringr)
+changed: [test] => (item=scales)
+changed: [test] => (item=RColorBrewer)
+changed: [test] => (item=dichromat)
+changed: [test] => (item=colorspace)
+changed: [test] => (item=labeling)
+changed: [test] => (item=munsell)
+changed: [test] => (item=ggplot2)
+
+NOTIFIED: [R changed] ********************************************************* 
+ok: [test]
+
+PLAY [rserve] ***************************************************************** 
+
+TASK: [Install R packages from CRAN] ****************************************** 
+changed: [test] => (item=biom)
+changed: [test] => (item=RColorBrewer)
+changed: [test] => (item=vegan)
+changed: [test] => (item=gplots)
+changed: [test] => (item=calibrate)
+changed: [test] => (item=ape)
+changed: [test] => (item=picante)
+changed: [test] => (item=Hmisc)
+
+NOTIFIED: [R changed] ********************************************************* 
+ok: [test]
+
+PLAY [rserve:&apt] ************************************************************ 
+skipping: no hosts matched
+
+PLAY [rserve] ***************************************************************** 
+
+TASK: [Install R packages from CRAN] ****************************************** 
+changed: [test] => (item=lattice)
+changed: [test] => (item=sp)
+failed: [test] => (item=rgdal) => {"changed": true, "cmd": "echo \"options(repos=structure(c(CRAN='http://ftp.heanet.ie/mirrors/cran.r-project.org/')));if(require(rgdal)){}else{install.packages('rgdal');library(rgdal)}\" | /usr/bin/R --no-save ", "delta": "0:00:31.269184", "end": "2015-06-18 19:52:08.954240", "item": "rgdal", "rc": 1, "start": "2015-06-18 19:51:37.685056"}
+stderr: Loading required package: rgdal
+Installing package into '/usr/local/lib/R/site-library'
+(as 'lib' is unspecified)
+trying URL 'http://ftp.heanet.ie/mirrors/cran.r-project.org/src/contrib/rgdal_0.9-3.tar.gz'
+Content type 'application/x-gzip' length 1627915 bytes (1.6 MB)
+==================================================
+downloaded 1.6 MB
+
+* installing *source* package 'rgdal' ...
+** package 'rgdal' successfully unpacked and MD5 sums checked
+configure: error: gdal-config not found or not executable.
+ERROR: configuration failed for package 'rgdal'
+* removing '/usr/local/lib/R/site-library/rgdal'
+Error in library(rgdal) : there is no package called 'rgdal'
+In addition: Warning messages:
+1: In library(package, lib.loc = lib.loc, character.only = TRUE, logical.return = TRUE,  :
+  there is no package called 'rgdal'
+2: In install.packages("rgdal") :
+  installation of package 'rgdal' had non-zero exit status
+Execution halted
+stdout: 
+R version 3.2.0 (2015-04-16) -- "Full of Ingredients"
+Copyright (C) 2015 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> options(repos=structure(c(CRAN='http://ftp.heanet.ie/mirrors/cran.r-project.org/')));if(require(rgdal)){}else{install.packages('rgdal');library(rgdal)}
+configure: CC: gcc -std=gnu99
+configure: CXX: g++
+configure: rgdal: 0.9-2
+checking for /usr/bin/svnversion... no
+configure: svn revision: 530
+checking for gdal-config... no
+no
+
+The downloaded source packages are in
+	'/tmp/Rtmpfyuk3s/downloaded_packages'
+changed: [test] => (item=raster)
+changed: [test] => (item=SDMTools)
+
+FATAL: all hosts have already failed -- aborting
+
+PLAY RECAP ******************************************************************** 
+           to retry, use: --limit @/home/seek/site.yaml.retry
+
+127.0.0.1                  : ok=3    changed=1    unreachable=0    failed=0   
+test                       : ok=18   changed=7    unreachable=0    failed=1   
+

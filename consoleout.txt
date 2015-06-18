@@ -1,0 +1,49 @@
+
+PLAY [localwebsvr] ************************************************************ 
+
+GATHERING FACTS *************************************************************** 
+ok: [127.0.0.1]
+
+TASK: [Get EC2 facts] ********************************************************* 
+failed: [127.0.0.1] => {"failed": true, "parsed": false}
+invalid output was: Traceback (most recent call last):
+  File "/home/seek/.ansible/tmp/ansible-1434644673.53-239933100977656/ec2_facts", line 1190, in <module>
+    main()
+  File "/home/seek/.ansible/tmp/ansible-1434644673.53-239933100977656/ec2_facts", line 154, in main
+    ec2_facts = Ec2Metadata().run()
+  File "/home/seek/.ansible/tmp/ansible-1434644673.53-239933100977656/ec2_facts", line 144, in run
+    self.fetch(self.uri_meta) # populate _data
+  File "/home/seek/.ansible/tmp/ansible-1434644673.53-239933100977656/ec2_facts", line 98, in fetch
+    raw_subfields = self._fetch(uri)
+  File "/home/seek/.ansible/tmp/ansible-1434644673.53-239933100977656/ec2_facts", line 74, in _fetch
+    return urllib2.urlopen(url).read()
+  File "/usr/lib/python2.7/urllib2.py", line 126, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib/python2.7/urllib2.py", line 400, in open
+    response = self._open(req, data)
+  File "/usr/lib/python2.7/urllib2.py", line 418, in _open
+    '_open', req)
+  File "/usr/lib/python2.7/urllib2.py", line 378, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python2.7/urllib2.py", line 1207, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib/python2.7/urllib2.py", line 1180, in do_open
+    r = h.getresponse(buffering=True)
+  File "/usr/lib/python2.7/httplib.py", line 1030, in getresponse
+    response.begin()
+  File "/usr/lib/python2.7/httplib.py", line 407, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python2.7/httplib.py", line 365, in _read_status
+    line = self.fp.readline()
+  File "/usr/lib/python2.7/socket.py", line 447, in readline
+    data = self._sock.recv(self._rbufsize)
+socket.timeout: timed out
+
+
+FATAL: all hosts have already failed -- aborting
+
+PLAY RECAP ******************************************************************** 
+           to retry, use: --limit @/home/seek/site.yaml.retry
+
+127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=1   
+

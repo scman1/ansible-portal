@@ -1,20 +1,24 @@
 ---
-- hosts: amazon
-  tasks:
-    - name: Get EC2 facts
-      action: ec2_facts
+#- hosts: localwebsvr
+#  connection: local
+#  tasks:
+#    - name: Get EC2 facts
+#      action: ec2_facts
 
-- hosts: all
+- hosts: localwebsvr
+  connection: local
   tasks:
     - group_by: key={{ ansible_pkg_mgr }}
 
-- hosts: apt
+- hosts: localwebsvr
+  connection: local
   sudo: true
   tasks:
     - name: Update apt repository
       apt: update_cache=yes cache_valid_time=3600
 
-- include: core/ntp/ntp.yaml
+
+#- include: core/ntp/ntp.yaml
 # Everything needed for Rserve and workflow dependencies
 # Currently, the workflow dependencies are between r-base and rserve
 # so that R packages exist when Rserve is started
@@ -36,10 +40,10 @@
 - include: apache-tomcat7/tomcat7.yaml
 - include: taverna-server/tserver.yaml
 # Everything needed for DRW workflow
-- include: google/refine/refine.yaml
-- include: biovel/workflows/drw.yaml
+#- include: google/refine/refine.yaml
+#- include: biovel/workflows/drw.yaml
 # Everything needed for BioVeL Portal
-- include: mail-transfer/sendmail.yml
-- include: mysql/mysql-server.yaml
-- include: apache-httpd/httpd.yaml
-- include: biovel/portal/portal.yaml
+#- include: mail-transfer/sendmail.yml
+#- include: mysql/mysql-server.yaml
+#- include: apache-httpd/httpd.yaml
+#- include: biovel/portal/portal.yaml

@@ -1,0 +1,114 @@
+
+PLAY [localwebsvr] ************************************************************ 
+
+GATHERING FACTS *************************************************************** 
+ok: [127.0.0.1]
+
+TASK: [group_by key={{ansible_pkg_mgr}}] ************************************** 
+changed: [127.0.0.1]
+
+PLAY [localwebsvr] ************************************************************ 
+
+TASK: [Update apt repository] ************************************************* 
+ok: [127.0.0.1]
+
+PLAY [rbase] ****************************************************************** 
+
+GATHERING FACTS *************************************************************** 
+ok: [test]
+
+TASK: [group_by key=rOn{{ansible_distribution}}] ****************************** 
+changed: [test]
+
+PLAY [rOnUbuntu] ************************************************************** 
+
+TASK: [Add package python-software-properties] ******************************** 
+ok: [test]
+
+TASK: [Add Ubuntu repository for R] ******************************************* 
+ok: [test]
+
+TASK: [Add repository key] **************************************************** 
+ok: [test]
+
+PLAY [rOnLinuxmint] *********************************************************** 
+skipping: no hosts matched
+
+PLAY [rbase] ****************************************************************** 
+
+TASK: [Setup R facts] ********************************************************* 
+ok: [test]
+
+TASK: [Install R] ************************************************************* 
+ok: [test] => (item=r-base,r-base-dev,r-recommended)
+
+PLAY [rserve] ***************************************************************** 
+
+TASK: [Install R packages from CRAN] ****************************************** 
+changed: [test] => (item=lattice)
+changed: [test] => (item=Matrix)
+changed: [test] => (item=MASS)
+changed: [test] => (item=nlme)
+changed: [test] => (item=mvtnorm)
+changed: [test] => (item=MCMCglmm)
+changed: [test] => (item=truncnorm)
+changed: [test] => (item=IPMpack)
+
+NOTIFIED: [R changed] ********************************************************* 
+ok: [test]
+
+PLAY [rserve] ***************************************************************** 
+
+TASK: [Install R packages from CRAN] ****************************************** 
+changed: [test] => (item=quadprog)
+changed: [test] => (item=popbio)
+changed: [test] => (item=Matrix)
+changed: [test] => (item=expm)
+
+NOTIFIED: [R changed] ********************************************************* 
+ok: [test]
+
+PLAY [rserve:&apt] ************************************************************ 
+skipping: no hosts matched
+
+PLAY [rserve] ***************************************************************** 
+
+TASK: [Install devtools package from CRAN] ************************************ 
+changed: [test] => (item=RCurl)
+changed: [test] => (item=httr)
+changed: [test] => (item=devtools)
+
+TASK: [Install popdemo package from CRAN archive] ***************************** 
+changed: [test]
+
+NOTIFIED: [R changed] ********************************************************* 
+ok: [test]
+
+PLAY [rserve] ***************************************************************** 
+
+TASK: [Install R packages from CRAN] ****************************************** 
+changed: [test] => (item=permute)
+changed: [test] => (item=lattice)
+changed: [test] => (item=nlme)
+changed: [test] => (item=MASS)
+changed: [test] => (item=vegan)
+changed: [test] => (item=ape)
+changed: [test] => (item=plyr)
+changed: [test] => (item=digest)
+changed: [test] => (item=gtable)
+changed: [test] => (item=reshape2)
+changed: [test] => (item=stringr)
+changed: [test] => (item=scales)
+changed: [test] => (item=RColorBrewer)
+changed: [test] => (item=dichromat)
+changed: [test] => (item=colorspace)
+changed: [test] => (item=labeling)
+changed: [test] => (item=munsell)
+changed: [test] => (item=ggplot2)
+
+NOTIFIED: [R changed] ********************************************************* 
+ok: [test]
+
+PLAY [rserve] ***************************************************************** 
+
+TASK: [Install R packages from CRAN] ****************************************** 
