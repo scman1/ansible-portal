@@ -57,7 +57,7 @@
       git: >
         repo=https://github.com/scman1/portal-UPP.git
         dest={{biovel_portal_install}}
-        version={{biovel_portal_version}}
+#       version={{biovel_portal_version}}
       notify: restart portal
 
     - name: install Ruby dependencies using bundler

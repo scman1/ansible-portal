@@ -35,7 +35,7 @@
 {%   if secure_apache %}
     ServerName {{apache_https["hostname"]}}
 {%   else %}
-    ServerName {{external_hostname}}
+    ServerName lvb.uppuebla.edu.mx
 {%   endif %}
     ServerAdmin {{sysadmin_email}}
 
