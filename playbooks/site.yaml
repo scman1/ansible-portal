@@ -1,4 +1,5 @@
 ---
+# Not needed as we are running as local host
 #- hosts: localwebsvr
 #  connection: local
 #  tasks:
@@ -40,10 +41,10 @@
 - include: apache-tomcat7/tomcat7.yaml
 - include: taverna-server/tserver.yaml
 # Everything needed for DRW workflow
-#- include: google/refine/refine.yaml
-#- include: biovel/workflows/drw.yaml
+- include: google/refine/refine.yaml
+- include: biovel/workflows/drw.yaml
 # Everything needed for BioVeL Portal
-#- include: mail-transfer/sendmail.yml
+- include: mail-transfer/sendmail.yml
 #- include: mysql/mysql-server.yaml
 #- include: apache-httpd/httpd.yaml
 #- include: biovel/portal/portal.yaml
