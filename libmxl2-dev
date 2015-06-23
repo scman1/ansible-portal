@@ -1,0 +1,66 @@
+Package: libxml2-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 2430
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian XML/SGML Group <debian-xml-sgml-pkgs@lists.alioth.debian.org>
+Architecture: i386
+Source: libxml2
+Version: 2.9.1+dfsg1-3ubuntu4.4
+Depends: libxml2 (= 2.9.1+dfsg1-3ubuntu4.4)
+Suggests: pkg-config
+Filename: pool/main/libx/libxml2/libxml2-dev_2.9.1+dfsg1-3ubuntu4.4_i386.deb
+Size: 628404
+MD5sum: e3c9406fd7a3036a4f7fc80c5b8386e1
+SHA1: 254f3a7b7c30647316233412ce5f385285093408
+SHA256: df3b136350aabc054a109a89bcce2f225477d566cc97046f9e457c5dea1eedc0
+Description-en_GB: Development files for the GNOME XML library
+ XML is a metalanguage to let you design your own markup language. A
+ regular markup language defines a way to describe information in a certain
+ class of documents (eg HTML). XML lets you define your own customised
+ markup languages for many classes of document. It can do this because it's
+ written in SGML, the international standard metalanguage for markup
+ languages.
+ .
+ Install this package if you wish to develop your own programs using the
+ GNOME XML library.
+Description-md5: 3fc5da551079ce5d27e8aae047e7a888
+Multi-Arch: same
+Homepage: http://xmlsoft.org/
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libxml2-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 2429
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian XML/SGML Group <debian-xml-sgml-pkgs@lists.alioth.debian.org>
+Architecture: i386
+Source: libxml2
+Version: 2.9.1+dfsg1-3ubuntu4
+Depends: libxml2 (= 2.9.1+dfsg1-3ubuntu4)
+Suggests: pkg-config
+Filename: pool/main/libx/libxml2/libxml2-dev_2.9.1+dfsg1-3ubuntu4_i386.deb
+Size: 627248
+MD5sum: 592ff913a769792868d07ac13c028395
+SHA1: 3f50f827c888546a81a05f6067b4a3d997aa8294
+SHA256: 9b42d3f5d613bb6905d95f8db57dcc608aea1b482e707cc6d0b5a337424dc590
+Description-en_GB: Development files for the GNOME XML library
+ XML is a metalanguage to let you design your own markup language. A
+ regular markup language defines a way to describe information in a certain
+ class of documents (eg HTML). XML lets you define your own customised
+ markup languages for many classes of document. It can do this because it's
+ written in SGML, the international standard metalanguage for markup
+ languages.
+ .
+ Install this package if you wish to develop your own programs using the
+ GNOME XML library.
+Description-md5: 3fc5da551079ce5d27e8aae047e7a888
+Multi-Arch: same
+Homepage: http://xmlsoft.org/
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+

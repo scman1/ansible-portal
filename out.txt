@@ -1,0 +1,182 @@
+
+PLAY [localwebsvr] ************************************************************ 
+
+GATHERING FACTS *************************************************************** 
+ok: [127.0.0.1]
+
+TASK: [group_by key={{ansible_pkg_mgr}}] ************************************** 
+changed: [127.0.0.1]
+
+PLAY [localwebsvr] ************************************************************ 
+
+TASK: [Update apt repository] ************************************************* 
+ok: [127.0.0.1]
+
+PLAY [rbase] ****************************************************************** 
+
+TASK: [group_by key=rOn{{ansible_distribution}}] ****************************** 
+changed: [127.0.0.1]
+
+PLAY [rOnUbuntu] ************************************************************** 
+
+TASK: [Add package python-software-properties] ******************************** 
+ok: [127.0.0.1]
+
+TASK: [Add Ubuntu repository for R] ******************************************* 
+ok: [127.0.0.1]
+
+TASK: [Add repository key] **************************************************** 
+ok: [127.0.0.1]
+
+PLAY [rOnLinuxmint] *********************************************************** 
+skipping: no hosts matched
+
+PLAY [rbase] ****************************************************************** 
+
+TASK: [Setup R facts] ********************************************************* 
+ok: [127.0.0.1]
+
+TASK: [Install R] ************************************************************* 
+ok: [127.0.0.1] => (item=r-base,r-base-dev,r-recommended)
+
+PLAY [rserve] ***************************************************************** 
+
+TASK: [Install R packages from CRAN] ****************************************** 
+changed: [127.0.0.1] => (item=lattice)
+changed: [127.0.0.1] => (item=Matrix)
+changed: [127.0.0.1] => (item=MASS)
+changed: [127.0.0.1] => (item=nlme)
+changed: [127.0.0.1] => (item=mvtnorm)
+changed: [127.0.0.1] => (item=MCMCglmm)
+changed: [127.0.0.1] => (item=truncnorm)
+changed: [127.0.0.1] => (item=IPMpack)
+
+NOTIFIED: [R changed] ********************************************************* 
+ok: [127.0.0.1]
+
+PLAY [rserve] ***************************************************************** 
+
+TASK: [Install R packages from CRAN] ****************************************** 
+changed: [127.0.0.1] => (item=quadprog)
+changed: [127.0.0.1] => (item=popbio)
+changed: [127.0.0.1] => (item=Matrix)
+changed: [127.0.0.1] => (item=expm)
+
+NOTIFIED: [R changed] ********************************************************* 
+ok: [127.0.0.1]
+
+PLAY [rserve:&apt] ************************************************************ 
+
+TASK: [Install CURL libraries] ************************************************ 
+ok: [127.0.0.1] => (item=libcurl4-gnutls-dev)
+
+PLAY [rserve] ***************************************************************** 
+
+TASK: [Install devtools package from CRAN] ************************************ 
+changed: [127.0.0.1] => (item=RCurl)
+changed: [127.0.0.1] => (item=httr)
+failed: [127.0.0.1] => (item=devtools) => {"changed": true, "cmd": "echo \"options(repos=structure(c(CRAN='http://www.stats.bris.ac.uk/R/')));if(require(devtools)){}else{install.packages('devtools');library(devtools)}\" | /usr/bin/R --no-save ", "delta": "0:00:20.058328", "end": "2015-06-23 14:03:33.143001", "item": "devtools", "rc": 1, "start": "2015-06-23 14:03:13.084673"}
+stderr: Loading required package: devtools
+Installing package into '/usr/local/lib/R/site-library'
+(as 'lib' is unspecified)
+also installing the dependencies 'xml2', 'rversions', 'git2r'
+
+trying URL 'http://www.stats.bris.ac.uk/R/src/contrib/xml2_0.1.1.tar.gz'
+Content type 'application/x-gzip' length 73772 bytes (72 KB)
+==================================================
+downloaded 72 KB
+
+trying URL 'http://www.stats.bris.ac.uk/R/src/contrib/rversions_1.0.1.tar.gz'
+Content type 'application/x-gzip' length 4624 bytes
+==================================================
+downloaded 4624 bytes
+
+trying URL 'http://www.stats.bris.ac.uk/R/src/contrib/git2r_0.10.1.tar.gz'
+Content type 'application/x-gzip' length 1014817 bytes (991 KB)
+==================================================
+downloaded 991 KB
+
+trying URL 'http://www.stats.bris.ac.uk/R/src/contrib/devtools_1.8.0.tar.gz'
+Content type 'application/x-gzip' length 141487 bytes (138 KB)
+==================================================
+downloaded 138 KB
+
+* installing *source* package 'xml2' ...
+** package 'xml2' successfully unpacked and MD5 sums checked
+Package libxml-2.0 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `libxml-2.0.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'libxml-2.0' found
+Package libxml-2.0 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `libxml-2.0.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'libxml-2.0' found
+ERROR: configuration failed for package 'xml2'
+* removing '/usr/local/lib/R/site-library/xml2'
+* installing *source* package 'git2r' ...
+** package 'git2r' successfully unpacked and MD5 sums checked
+configure: error: in `/tmp/RtmpNEpuEf/R.INSTALL52e41810baed/git2r':
+configure: error: OpenSSL library required
+See `config.log' for more details
+ERROR: configuration failed for package 'git2r'
+* removing '/usr/local/lib/R/site-library/git2r'
+ERROR: dependency 'xml2' is not available for package 'rversions'
+* removing '/usr/local/lib/R/site-library/rversions'
+ERROR: dependencies 'rversions', 'git2r' are not available for package 'devtools'
+* removing '/usr/local/lib/R/site-library/devtools'
+Error in library(devtools) : there is no package called 'devtools'
+In addition: Warning messages:
+1: In library(package, lib.loc = lib.loc, character.only = TRUE, logical.return = TRUE,  :
+  there is no package called 'devtools'
+2: In install.packages("devtools") :
+  installation of package 'xml2' had non-zero exit status
+3: In install.packages("devtools") :
+  installation of package 'git2r' had non-zero exit status
+4: In install.packages("devtools") :
+  installation of package 'rversions' had non-zero exit status
+5: In install.packages("devtools") :
+  installation of package 'devtools' had non-zero exit status
+Execution halted
+stdout: 
+R version 3.2.1 (2015-06-18) -- "World-Famous Astronaut"
+Copyright (C) 2015 The R Foundation for Statistical Computing
+Platform: i686-pc-linux-gnu (32-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> options(repos=structure(c(CRAN='http://www.stats.bris.ac.uk/R/')));if(require(devtools)){}else{install.packages('devtools');library(devtools)}
+Could not find libxml2. Please install libxml2-devel (rpm) or libxml2-dev (deb).
+checking build system type... i686-pc-linux-gnu
+checking host system type... i686-pc-linux-gnu
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for library containing inflate... -lz
+checking for library containing SSL_library_init... no
+
+The downloaded source packages are in
+	'/tmp/RtmpFnLBpl/downloaded_packages'
+
+FATAL: all hosts have already failed -- aborting
+
+PLAY RECAP ******************************************************************** 
+           to retry, use: --limit @/home/lvbadmin/site.yaml.retry
+
+127.0.0.1                  : ok=14   changed=4    unreachable=0    failed=1   
+

@@ -80,8 +80,9 @@
     <Directory {{biovel_portal_install}}/public>
         Options -MultiViews
         AllowOverride None
-        Order allow,deny
-        Allow from all
+        Require all granted
+        #Order allow,deny
+        #Allow from all
     </Directory>
     <IfModule expires_module>
         # Ruby on Rails 3 asset pipeline caching

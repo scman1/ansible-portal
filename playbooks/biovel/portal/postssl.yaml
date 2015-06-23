@@ -16,7 +16,7 @@
       notify: restart portal
 
     - name: add Virtual Host to Apache
-      template: src=vhost.j2 dest=/etc/apache2/sites-available/tlite
+      template: src=vhost.j2 dest=/etc/apache2/sites-available/tlite.conf
       notify: restart portal
 
     - name: disable default site
@@ -26,7 +26,7 @@
 
     - name: enable Portal site
       command: a2ensite tlite
-          creates=/etc/apache2/sites-enabled/tlite
+          creates=/etc/apache2/sites-enabled/tlite.conf
       notify: restart portal
 
   handlers:

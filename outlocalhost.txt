@@ -1,0 +1,605 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <!--
+    Modified from the Debian original for Ubuntu
+    Last updated: 2014-03-19
+    See: https://launchpad.net/bugs/1288690
+  -->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Apache2 Ubuntu Default Page: It works</title>
+    <style type="text/css" media="screen">
+  * {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+  }
+
+  body, html {
+    padding: 3px 3px 3px 3px;
+
+    background-color: #D8DBE2;
+
+    font-family: Verdana, sans-serif;
+    font-size: 11pt;
+    text-align: center;
+  }
+
+  div.main_page {
+    position: relative;
+    display: table;
+
+    width: 800px;
+
+    margin-bottom: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 0px 0px 0px;
+
+    border-width: 2px;
+    border-color: #212738;
+    border-style: solid;
+
+    background-color: #FFFFFF;
+
+    text-align: center;
+  }
+
+  div.page_header {
+    height: 99px;
+    width: 100%;
+
+    background-color: #F5F6F7;
+  }
+
+  div.page_header span {
+    margin: 15px 0px 0px 50px;
+
+    font-size: 180%;
+    font-weight: bold;
+  }
+
+  div.page_header img {
+    margin: 3px 0px 0px 40px;
+
+    border: 0px 0px 0px;
+  }
+
+  div.table_of_contents {
+    clear: left;
+
+    min-width: 200px;
+
+    margin: 3px 3px 3px 3px;
+
+    background-color: #FFFFFF;
+
+    text-align: left;
+  }
+
+  div.table_of_contents_item {
+    clear: left;
+
+    width: 100%;
+
+    margin: 4px 0px 0px 0px;
+
+    background-color: #FFFFFF;
+
+    color: #000000;
+    text-align: left;
+  }
+
+  div.table_of_contents_item a {
+    margin: 6px 0px 0px 6px;
+  }
+
+  div.content_section {
+    margin: 3px 3px 3px 3px;
+
+    background-color: #FFFFFF;
+
+    text-align: left;
+  }
+
+  div.content_section_text {
+    padding: 4px 8px 4px 8px;
+
+    color: #000000;
+    font-size: 100%;
+  }
+
+  div.content_section_text pre {
+    margin: 8px 0px 8px 0px;
+    padding: 8px 8px 8px 8px;
+
+    border-width: 1px;
+    border-style: dotted;
+    border-color: #000000;
+
+    background-color: #F5F6F7;
+
+    font-style: italic;
+  }
+
+  div.content_section_text p {
+    margin-bottom: 6px;
+  }
+
+  div.content_section_text ul, div.content_section_text li {
+    padding: 4px 8px 4px 16px;
+  }
+
+  div.section_header {
+    padding: 3px 6px 3px 6px;
+
+    background-color: #8E9CB2;
+
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 112%;
+    text-align: center;
+  }
+
+  div.section_header_red {
+    background-color: #CD214F;
+  }
+
+  div.section_header_grey {
+    background-color: #9F9386;
+  }
+
+  .floating_element {
+    position: relative;
+    float: left;
+  }
+
+  div.table_of_contents_item a,
+  div.content_section_text a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  div.table_of_contents_item a:link,
+  div.table_of_contents_item a:visited,
+  div.table_of_contents_item a:active {
+    color: #000000;
+  }
+
+  div.table_of_contents_item a:hover {
+    background-color: #000000;
+
+    color: #FFFFFF;
+  }
+
+  div.content_section_text a:link,
+  div.content_section_text a:visited,
+   div.content_section_text a:active {
+    background-color: #DCDFE6;
+
+    color: #000000;
+  }
+
+  div.content_section_text a:hover {
+    background-color: #000000;
+
+    color: #DCDFE6;
+  }
+
+  div.validator {
+  }
+    </style>
+  </head>
+  <body>
+    <div class="main_page">
+      <div class="page_header floating_element">
+        <img src="/icons/ubuntu-logo.png" alt="Ubuntu Logo" class="floating_element"/>
+        <span class="floating_element">
+          Apache2 Ubuntu Default Page
+        </span>
+      </div>
+<!--      <div class="table_of_contents floating_element">
+        <div class="section_header section_header_grey">
+          TABLE OF CONTENTS
+        </div>
+        <div class="table_of_contents_item floating_element">
+          <a href="#about">About</a>
+        </div>
+        <div class="table_of_contents_item floating_element">
+          <a href="#changes">Changes</a>
+        </div>
+        <div class="table_of_contents_item floating_element">
+          <a href="#scope">Scope</a>
+        </div>
+        <div class="table_of_contents_item floating_element">
+          <a href="#files">Config files</a>
+        </div>
+      </div>
+-->
+      <div class="content_section floating_element">
+
+
+        <div class="section_header section_header_red">
+          <div id="about"></div>
+          It works!
+        </div>
+        <div class="content_section_text">
+          <p>
+                This is the default welcome page used to test the correct 
+                operation of the Apache2 server after installation on Ubuntu systems.
+                It is based on the equivalent page on Debian, from which the Ubuntu Apache
+                packaging is derived.
+                If you can read this page, it means that the Apache HTTP server installed at
+                this site is working properly. You should <b>replace this file</b> (located at
+                <tt>/var/www/html/index.html</tt>) before continuing to operate your HTTP server.
+          </p>
+
+
+          <p>
+                If you are a normal user of this web site and don't know what this page is
+                about, this probably means that the site is currently unavailable due to
+                maintenance.
+                If the problem persists, please contact the site's administrator.
+          </p>
+
+        </div>
+        <div class="section_header">
+          <div id="changes"></div>
+                Configuration Overview
+        </div>
+        <div class="content_section_text">
+          <p>
+                Ubuntu's Apache2 default configuration is different from the
+                upstream default configuration, and split into several files optimized for
+                interaction with Ubuntu tools. The configuration system is
+                <b>fully documented in
+                /usr/share/doc/apache2/README.Debian.gz</b>. Refer to this for the full
+                documentation. Documentation for the web server itself can be
+                found by accessing the <a href="/manual">manual</a> if the <tt>apache2-doc</tt>
+                package was installed on this server.
+
+          </p>
+          <p>
+                The configuration layout for an Apache2 web server installation on Ubuntu systems is as follows:
+          </p>
+          <pre>
+/etc/apache2/
+|-- apache2.conf
+|       `--  ports.conf
+|-- mods-enabled
+|       |-- *.load
+|       `-- *.conf
+|-- conf-enabled
+|       `-- *.conf
+|-- sites-enabled
+|       `-- *.conf
+          </pre>
+          <ul>
+                        <li>
+                           <tt>apache2.conf</tt> is the main configuration
+                           file. It puts the pieces together by including all remaining configuration
+                           files when starting up the web server.
+                        </li>
+
+                        <li>
+                           <tt>ports.conf</tt> is always included from the
+                           main configuration file. It is used to determine the listening ports for
+                           incoming connections, and this file can be customized anytime.
+                        </li>
+
+                        <li>
+                           Configuration files in the <tt>mods-enabled/</tt>,
+                           <tt>conf-enabled/</tt> and <tt>sites-enabled/</tt> directories contain
+                           particular configuration snippets which manage modules, global configuration
+                           fragments, or virtual host configurations, respectively.
+                        </li>
+
+                        <li>
+                           They are activated by symlinking available
+                           configuration files from their respective
+                           *-available/ counterparts. These should be managed
+                           by using our helpers
+                           <tt>
+                                <a href="http://manpages.debian.org/cgi-bin/man.cgi?query=a2enmod">a2enmod</a>,
+                                <a href="http://manpages.debian.org/cgi-bin/man.cgi?query=a2dismod">a2dismod</a>,
+                           </tt>
+                           <tt>
+                                <a href="http://manpages.debian.org/cgi-bin/man.cgi?query=a2ensite">a2ensite</a>,
+                                <a href="http://manpages.debian.org/cgi-bin/man.cgi?query=a2dissite">a2dissite</a>,
+                            </tt>
+                                and
+                           <tt>
+                                <a href="http://manpages.debian.org/cgi-bin/man.cgi?query=a2enconf">a2enconf</a>,
+                                <a href="http://manpages.debian.org/cgi-bin/man.cgi?query=a2disconf">a2disconf</a>
+                           </tt>. See their respective man pages for detailed information.
+                        </li>
+
+                        <li>
+                           The binary is called apache2. Due to the use of
+                           environment variables, in the default configuration, apache2 needs to be
+                           started/stopped with <tt>/etc/init.d/apache2</tt> or <tt>apache2ctl</tt>.
+                           <b>Calling <tt>/usr/bin/apache2</tt> directly will not work</b> with the
+                           default configuration.
+                        </li>
+          </ul>
+        </div>
+
+        <div class="section_header">
+            <div id="docroot"></div>
+                Document Roots
+        </div>
+
+        <div class="content_section_text">
+            <p>
+                By default, Ubuntu does not allow access through the web browser to
+                <em>any</em> file apart of those located in <tt>/var/www</tt>,
+                <a href="http://httpd.apache.org/docs/2.4/mod/mod_userdir.html">public_html</a>
+                directories (when enabled) and <tt>/usr/share</tt> (for web
+                applications). If your site is using a web document root
+                located elsewhere (such as in <tt>/srv</tt>) you may need to whitelist your
+                document root directory in <tt>/etc/apache2/apache2.conf</tt>.
+            </p>
+            <p>
+                The default Ubuntu document root is <tt>/var/www/html</tt>. You
+                can make your own virtual hosts under /var/www. This is different
+                to previous releases which provides better security out of the box.
+            </p>
+        </div>
+
+        <div class="section_header">
+          <div id="bugs"></div>
+                Reporting Problems
+        </div>
+        <div class="content_section_text">
+          <p>
+                Please use the <tt>ubuntu-bug</tt> tool to report bugs in the
+                Apache2 package with Ubuntu. However, check <a
+                href="https://bugs.launchpad.net/ubuntu/+source/apache2">existing
+                bug reports</a> before reporting a new bug.
+          </p>
+          <p>
+                Please report bugs specific to modules (such as PHP and others)
+                to respective packages, not to the web server itself.
+          </p>
+        </div>
+
+
+
+
+      </div>
+    </div>
+    <div class="validator">
+    <p>
+      <a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="31" width="88" /></a>
+    </p>
+    </div>
+  </body>
+</html>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible"/>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+  <title>LVB UPP</title>
+  <link rel="shortcut icon" href="/assets/Logo_UPP_Posgrado_48-3b27e6ca6e33fc4d17f2fceb422a81d8.png" type="image/png"/>
+
+  
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="sYYXSQbnSyPkHB0TVFWBGYEwhnVdZqQLNBCtzgyFd+w=" name="csrf-token" />
+
+  <link href="/assets/application-b544463378419e0bb36ac458b9061035.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/assets/biovel_application-0812592672e1dd8b0c0ea2ca810e52bb.css" media="screen" rel="stylesheet" type="text/css" />
+  <script src="/assets/application-29c6da9a09610d919aec68dc01a0c198.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+      function show_ajax_loader(element) {
+          $(element).innerHTML ='<img alt="Ajax-loader" src="/assets/ajax-loader-3b432a8b15d4cc7449b3d5819ae3e848.gif" />';
+      }
+      function show_large_ajax_loader(element) {
+          $(element).innerHTML ='<img alt="Ajax-loader-large" src="/assets/ajax-loader-large-e1f671b701d084e8107bd0c2a25819af.gif" />'      }
+  </script>
+</head>
+
+<body id="body">
+<div id="container">
+
+  <div id="header" class="clearfix">
+    <div>
+      <a href="http://www.lvbupp.edu.mx/" style="float: left" target="_blank"><img alt="LVB UPP" src="/assets/Logo_UPP_Posgrado_48-3b27e6ca6e33fc4d17f2fceb422a81d8.png" style="height: 50px" title="LVB UPP" /></a>
+      <ul class="biovel-menutabs clearfix">
+        <li class="active"><a href="/en"><b class=""></b> Home</a></li>        <li><a href="/en/workflows"><b class=""></b> Workflows</a></li>        <li><a href="/runs?locale=en"><b class=""></b> Runs</a></li>      </ul>
+      <ul class="biovel-menutabs clearfix" style="float: right; margin-right: 20px">
+        <li><a href="/en/about"><b class=""></b> About</a></li>        <li><a href="/en/contact"><b class=""></b> Contact</a></li>            <li><a href="#" onclick="$('menubar-login-form').toggle();">Log in / Register</a></li>
+            <div id="menubar-login-form" style="display: none"><div class="sysmo_gadget">
+    <div class="header curved_top">
+        <p>
+            Log in / Register
+        </p>
+    </div>
+    <div class="contents curved_bottom">
+        <form accept-charset="UTF-8" action="/en/session" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="sYYXSQbnSyPkHB0TVFWBGYEwhnVdZqQLNBCtzgyFd+w=" /></div>
+        <input id="called_from_url" name="called_from[url]" type="hidden" value="http://lvb.uppuebla.edu.mx/" />        <input id="called_from_controller" name="called_from[controller]" type="hidden" value="homes" />        <input id="called_from_action" name="called_from[action]" type="hidden" value="index" />        <input id="called_from_id" name="called_from[id]" type="hidden" />        <div class="login_surround curved">
+            <div id="password_login">
+                <p class="label">
+                    Login:
+                </p>
+                <p>
+                    <input class="field" id="login" name="login" style="width:150px" type="text" />                </p>
+                <p class="label">
+                    Password:
+                </p>
+                <p>
+                    <input class="field curved" id="password" name="password" style="width:150px" type="password" />                </p>
+                <p class="label">
+                    Remember me: <input id="remember_me" name="remember_me" style="width:2em;" type="checkbox" />
+                </p>
+            </div>
+            <div id="openid_login" style="display: none">
+                <p class="label">
+                    <a href="http://openid.net/" target="_blank"><img alt="Openid-16x16" src="/assets/openid-16x16-1192a72b230c7938760aecca94485f52.gif" />OpenID:</a>
+                </p>
+                <p>
+                    <input class="field curved" id="openid_identifier" name="openid_identifier" style="width:150px" type="text" />                </p>
+            </div>
+            <p>
+                Alternatively...
+                <br/>
+                <a href="#" id="login_toggle_link" onclick="toggleLogin();return false">Log in using <img alt="Openid-16x16" src="/assets/openid-16x16-1192a72b230c7938760aecca94485f52.gif" />OpenID</a>
+                <br/>
+            </p>
+        </div>
+        <p>
+            <input id="login_button" name="commit" onclick="$(&#x27;login_button&#x27;).disabled=true;this.form.submit();return(false);" type="submit" value="Log in" />
+        </p>
+</form>        <p>
+            <b>Need an account?</b>
+            <br/>
+            <b><a href="http://lvb.uppuebla.edu.mx/en/signup">Sign up</a></b>
+        </p>
+
+        <p style="font-size: 83%;">
+            <b><a href="http://lvb.uppuebla.edu.mx/en/forgot_password">Forgotten password?</a></b>
+        </p>
+    </div>    
+</div>
+<script type="text/javascript">
+    function toggleLogin(){
+        var elem1 = $('password_login');
+        var elem2 = $('openid_login');
+        var link = $('login_toggle_link');
+        if (elem1.style.display == 'none') {
+            link.innerHTML = 'Log in using <img alt="Openid-16x16" src="/assets/openid-16x16-1192a72b230c7938760aecca94485f52.gif" />OpenID';
+            Effect.BlindUp('openid_login', {
+                duration: 0.2
+            });
+            Effect.BlindDown('password_login', {
+                duration: 0.2
+            });
+        }
+        else {
+            link.innerHTML = "Log in using username/password";
+            Effect.BlindUp('password_login', {
+                duration: 0.2
+            });
+            Effect.BlindDown('openid_login', {
+                duration: 0.2
+            });
+        }
+    }
+</script>
+</div>
+      </ul>
+    </div>
+  </div>
+  <div id="bd">
+    <div id="yui-main">
+      <div id="content">
+        <table width="100%">
+          <tr>
+            <td>
+            </td>
+
+            <td class="return_to_search" id='return_to_search'>
+              
+            </td>
+          </tr>
+        </table>
+
+
+
+        <div id="home">
+
+  <script src="/assets/jquery.bxslider-d4c1f33f6d4d12641a7bd0a4523929ff.js" type="text/javascript"></script>
+<script type="application/javascript">
+    $j(document).ready(function() {
+        $j('.bxslider').bxSlider({
+            randomStart: true,
+            slideWidth: 900,
+            pager: false
+        });
+    });
+</script>
+
+<div class="carousel-wrapper">
+  <ul class="bxslider">
+    <li><img alt="Upp_anh_01" src="/assets/carousel_images/upp_anh_01-9c0643822937fc085c8a2833df31210e.jpg" /> <div class="image-credit">Photo by Posgrado UPP</div></li>
+    <li><img alt="Upp_anh_02" src="/assets/carousel_images/upp_anh_02-af2763d281db3db204cb933351063b54.jpg" /> <div class="image-credit">Photo by Posgrado UPP</div></li>
+    <li><img alt="Upp_anh_03" src="/assets/carousel_images/upp_anh_03-c66bab808bf8db0687529383e22972ec.jpg" /> <div class="image-credit">Photo by Posgrado UPP</div></li>
+    <!--<li>-->
+    <!--<div style="text-align: center; width: 900px; height: 300px; background: #ffffcc; line-height: 300px; font-size: 32px;">-->
+    <!--Your photo here-->
+    <!--</div>-->
+    <!--</li>-->
+  </ul>
+  <div class="carousel-info-box">
+    <h5>Welcome to the Biotechnology Virtual Laboratory of the UPP</h5>
+    <p>
+      For technical support or questions about the <a href="http://informatica.uppuebla.edu.mx/">LVBUPP project</a>, please visit the <a href="/en/contact">Contact page</a>.
+    </p>
+  </div>
+</div>
+
+  <h1>Available analysis types</h1>
+<div style="width: 770px; margin: auto; text-align: center; overflow: auto">
+        <div class="workflow-category no-workflows" title="No workflows in this category">
+          <img alt="Taxonomic Refinement" height="80" src="/assets/category_logos/taxonomic_refinement-4ca25e0481854c86a945207af6cc4343.png" width="80" />
+          <br/>
+          Taxonomic Refinement
+        </div>
+        <div class="workflow-category no-workflows" title="No workflows in this category">
+          <img alt="Ecological Niche Modelling" height="80" src="/assets/category_logos/ecological_niche_modelling-2cbbd0676300c839a2e3ecbb30d156e5.png" width="80" />
+          <br/>
+          Ecological Niche Modelling
+        </div>
+        <div class="workflow-category no-workflows" title="No workflows in this category">
+          <img alt="Metagenomics" height="80" src="/assets/category_logos/metagenomics-6928894129373d507e8f0a8eca20789b.png" width="80" />
+          <br/>
+          Metagenomics
+        </div>
+        <div class="workflow-category no-workflows" title="No workflows in this category">
+          <img alt="Phylogenetics" height="80" src="/assets/category_logos/phylogenetics-30c510a25949ac00366fa1f0871aab39.png" width="80" />
+          <br/>
+          Phylogenetics
+        </div>
+        <div class="workflow-category no-workflows" title="No workflows in this category">
+          <img alt="Population Modelling" height="80" src="/assets/category_logos/population_modelling-5ce0baffb1d7ad94ff01716f7fe7e64e.png" width="80" />
+          <br/>
+          Population Modelling
+        </div>
+        <div class="workflow-category no-workflows" title="No workflows in this category">
+          <img alt="Ecosystem Modelling" height="80" src="/assets/category_logos/ecosystem_modelling-90b180eeeecdd792d70a0eb195cb9377.png" width="80" />
+          <br/>
+          Ecosystem Modelling
+        </div>
+</div>
+</div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div id="ft">
+    <div>
+      <img alt="Conacyt_long" src="/assets/logos/conacyt_long-fd08a011d054b0238a8436bcf8142f90.png" style="width: 128px; float: left; margin: 0 20px" />
+
+<div style="width: 800px"><a href="http://www.lvbupp.edu.mx/" target="_blank">LVB UPP</a> is sponsored by Universidad Politécnica de Puebla and CONACYT under the postgraduate strengthening programme 2015. This portal uses/adapts software developed as part of European projects:  <a href="http://www.biovel.eu" target="_blank">BioVeL</a>, <a href="http://www.seek4science.org" target="_blank">SEEK</a> , and  <a href="http://www.taverna.org.uk" target="_blank">Taverna</a>
+</div>
+
+<p style="text-align: right;">Portal version: 1.6.1-923fcb2</p>
+
+    </div>
+  </div>
+
+  <script type="text/javascript">
+      initialiseFolds();
+  </script>
+
+  
+</div>
+</body>
+</html>
