@@ -1,0 +1,224 @@
+    1  ping google
+    2  ping google.com
+    3  ping www.uppuebla.edu.mx
+    4  ls
+    5  ls /opt
+    6  apache2
+    7  git
+    8  poweroff
+    9  sudo poweroff
+   10  git
+   11  sudo apt-get install git
+   12  git
+   13  git status
+   14  ls
+   15  git clone https://github.com/scman1/ansible-portal.git
+   16  cd ansible-portal
+   17  ls
+   18  git status
+   19  git branch
+   20  git checkout changes_localhost
+   21  ls
+   22  git status
+   23  git branch
+   24  git log
+   25  sudo apt-get install python-yaml python-jinja2
+   26  ls
+   27  source
+   28  source setup.sh
+   29  ansible
+   30  ansible-playbook
+   31  ansible-playbook -c local inventory/hosts playbooks/site.yaml
+   32  ls
+   33  ls inventory
+   34  ls inventory/hosts
+   35  cat inventory/hosts
+   36  head inventory/hosts
+   37  ansible-playbook -c local inventory/hosts playbooks/site.yaml
+   38  sssssek
+   39  nano inventory/hosts
+   40  git  status
+   41  nano inventory/hosts
+   42  ansible-playbook -c local -i inventory/hosts playbooks/site.yaml
+   43  ls
+   44  ls history09.txt
+   45  ls
+   46  ls hist*
+   47  ls hist03
+   48  last history03.txt
+   49  tail history03.txt
+   50  ansible-playbook -c local -i inventory/hosts playbooks/site.yaml --user lvbadmin --ask-sudo-pass
+   51  ansible-playbook -c local -i inventory/hosts playbooks/site.yaml --user lvbadmin --ask-sudo-pass >> out.txt
+   52  nano out.txt
+   53  echo $PKG_CONFIG_PATH
+   54  ls /usr/local/lib/R
+   55  echo $PKG_CONFIG
+   56  pkg-config 
+   57  pkg-config  --variable pc_path
+   58  pkg-config  --variable pc_path pkg-config
+   59  grep -r xml2 /usr
+   60  apt-cache search libxml
+   61  apt-cache search libxml|grep dev
+   62  apt-cache show libxml2dev
+   63  apt-cache show libxml2-dev
+   64  apt-cache show libxml2-dev >> libmxl2-dev
+   65  nano libxml2-dev
+   66  nano libmxl2-dev
+   67  sudo apt-get install libxml2-dev
+   68  apt-cache show libxml2-dev >> libxml2-dev.txt
+   69  nano libxml2-dev.txt
+   70  echo $PKG_CONFIG_PATH
+   71  pkg-config  --variable pc_path pkg-config
+   72  ansible-playbook -c local -i inventory/hosts playbooks/site.yaml --user lvbadmin --ask-sudo-pass >> out02.txt
+   73  nano out02.txt
+   74  sudo apt-get install libssl-dev
+   75  df -h
+   76  ansible-playbook -c local -i inventory/hosts playbooks/site.yaml --user lvbadmin --ask-sudo-pass >> out03.txt
+   77  nano out03.txt
+   78  curl https://github.com/s-u/Rserve.git
+   79  git ls-remote
+   80  ping github.com
+   81  git ls-remote
+   82  ansible-playbook -c local -i inventory/hosts playbooks/site.yaml --user lvbadmin --ask-sudo-pass >> out04.txt
+   83  nano out04.txt
+   84  ls /etc/apache2
+   85  ls /etc/apache2/sites-available
+   86  ls /etc/apache2/sites-available/tlite
+   87  mv /etc/apache2/sites-available/tlite 
+   88  apache2 -v
+   89  nano out04.txt
+   90  nano playbooks/biovel/portal/postssl.yaml
+   91  ansible-playbook -c local -i inventory/hosts playbooks/site.yaml --user lvbadmin --ask-sudo-pass >> out05.txt
+   92  nano out05.txt
+   93  nano playbooks/biovel/portal/postssl.yaml
+   94  ls /etc/apache2/sites-available/tlite*
+   95  ls /etc/apache2/sites-available/
+   96  nano playbooks/biovel/portal/postssl.yaml
+   97  nano out05.txt
+   98  ls /etc/apache2/sites-enabled/
+   99  a2ensite
+  100  a2ensite tlite
+  101  nano playbooks/biovel/portal/postssl.yaml
+  102  ls /etc/apache2/sites-enabled/
+  103  ls /etc/apache2/sites-available/
+  104  rm /etc/apache2/sites-available/tlite
+  105  sudo rm /etc/apache2/sites-available/tlite
+  106  ls /etc/apache2/sites-available/
+  107  ansible-playbook -c local -i inventory/hosts playbooks/site.yaml --user lvbadmin --ask-sudo-pass >> out06.txt
+  108  nano out06.txt
+  109  ls /etc/apache2/sites-available/
+  110  grep -r tlite playbooks
+  111  nano playbooks/biovel/portal/portal.yaml
+  112  ansible-playbook -c local -i inventory/hosts playbooks/site.yaml --user lvbadmin --ask-sudo-pass >> out07.txt
+  113  nano out07.txt
+  114  curl localhost
+  115  curl localhost >> outlocalhost.txt
+  116  nano outlocalhost.txt
+  117  ls /etc/apache2/sites-available/
+  118  ls /etc/apache2/sites-enabled/
+  119  nano /etc/hosts
+  120  nano /etc/apache2/sites-available/tlite.conf
+  121  nano /etc/hosts
+  122  sudo nano /etc/hosts
+  123  ping lvb.puebla.edu.mx
+  124  ping lvb.uppuebla.edu.mx
+  125  curl lvbuppuebla.edu.mx
+  126  curl lvb.uppuebla.edu.mx
+  127  git log
+  128  git status
+  129  nano playbooks/biovel/portal/vhost.j2
+  130  ls
+  131  ansible-playbook -c local -i inventory/hosts playbooks/site.yaml --user lvbadmin --ask-sudo-pass >> out08.txt
+  132  curl lvbuppuebla.edu.mx
+  133  curl lvb.uppuebla.edu.mx
+  134  curl lvb.uppuebla.edu.mx >> outlocalhost.txt
+  135  nano outlocalhost.txt
+  136  sudo poweroff now
+  137  ls
+  138  cd ansible-portal
+  139  ls
+  140  git status
+  141  git add -a
+  142  git add -A
+  143  git status
+  144  git log
+  145  git commit -a -m "changes to install in local host for ubuntu 14.04"
+  146  git config --global user.email "abraham.nieva@uppuebla.edu.mx"
+  147  git config --global user.name "Abraham Nieva"
+  148  git commit -a -m "changes to install in local host for ubuntu 14.04"
+  149  git status
+  150  git push
+  151  ls
+  152  git status
+  153  auso poweroff now
+  154  sudo poweroff now
+  155  ifconfig
+  156  ifconfig | grep addr
+  157  sudo poweroff now
+  158  ifconfig | grep addr
+  159  nano /etc/network/interfaces
+  160  sudo /etc/init.d/networking start
+  161  sudo ifconfig eth0 down | sudo if config eth0up
+  162  sudo ifconfig eth0 down | sudo ifconfig eth0up
+  163  sudo ifconfig eth0 down | sudo ifconfig eth0 up
+  164  ls /etc/
+  165  nano /etc/udev/rules.d/README
+  166  ls /etc/apache2/sites-available/
+  167  ls /etc/apache2/sites-enabled/
+  168  a2dissite 000-default.conf
+  169  sudo a2dissite 000-default.conf
+  170  service apache2 reload
+  171  curl localhost
+  172  curl localhost |more
+  173  sudo service apache2 reload
+  174  curl localhost |more
+  175  curl localhost
+  176  curl localhost >> out localhostx
+  177  curl localhost >> outlocalhostx
+  178  head outlocalhostx
+  179  nano outlocalhostx
+  180  sudo poweroff now
+  181  nano outlocalhostx
+  182  curl localhost}
+  183  curl localhost
+  184  ping google.com
+  185  ls
+  186  rm out
+  187  rm outlocalhostx
+  188  ls
+  189  rm site.yaml.retry
+  190  ls
+  191  cd ansible-portal
+  192  ls
+  193  git status
+  194  sudo poweroff now
+  195  ls /etc
+  196  ls /etc/apache2
+  197  ls /etc/log
+  198  ls /etc/apache2
+  199  ls /etc/log
+  200  find
+  201  ls
+  202  cd /opt
+  203  ls
+  204  cd BioVeLPortal
+  205  ls
+  206  ping google.com
+  207  ls
+  208  cd log
+  209  ls
+  210  tail
+  211   production.log
+  212  ls
+  213  tail access.log
+  214  passenger-status
+  215  sudo passenger-status
+  216  mem
+  217  exit
+  218  sudo poweroff
+  219* 
+  220  cd ansible portal
+  221  cd ansible-portal
+  222  ls
+  223  tail history03.txt
+  224  history >> history04.txt
